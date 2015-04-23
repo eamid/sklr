@@ -3,7 +3,7 @@ function demo_sklr
 %
 % Function DEMO_SKLR performs a semi-supervised clustering demo on a dataset
 % of four normally distributed clusters using SKLR method. No input is
-% needed.
+% required. Run each section separately to see the results.
 %
 % (C) Ehsan Amid, Aalto University
 
