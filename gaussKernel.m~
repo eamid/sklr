@@ -1,0 +1,26 @@
+function K0 = gaussKernel(X,k)
+% GAUSSKERNEL finds initial Gaussian kernel matrix
+% 
+% K = gaussKernel(X,k)
+%
+% Function gaussKernel(X,k) finds the initial Gaussian kernel matrix of the
+% input X. The bandwidth parameter is estimated adaptively, based on the
+% k-nearest neighbor.
+%
+% input arguments:
+% X  ----  input data matrix (N x d)
+% k  ----  nearest neighbor for estimating 
+%
+% output arguments:
+% K          ----  transformed kernel matrix (NxN)
+% error      ----  log det error D_ld(K,K0)
+%
+% (C) Ehsan Amid, Aalto University
+
+[N,d] = size(X);
+% X = zscore(X);
+D = pdist2(X,X);
+D_sorted = sort(D, 2, 'ascend');
+sig = D_sorted(:,k);
+
+K0 = exp(-D.^2./(sig*sig')); %  + 0.001 * eye(N);
