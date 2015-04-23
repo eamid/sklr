@@ -3,7 +3,7 @@ function perms = classperms(no_classes, no_reps)
 % 
 % perms = classperms(no_clusters, no_reps)
 %
-% Function classperms returns all permutations of two points from one class
+% Function CLASSPERMS returns all permutations of two points from one class
 % and the third point from rest of the classes. The total number of classes
 % is equal to no_classes. Number of repetitions is added as the forth
 % argument. For instance, listperms(3,10) returns:

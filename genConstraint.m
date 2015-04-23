@@ -3,7 +3,7 @@ function [relative, equality] = genConstraint(labels, rel_class, eql_class)
 % 
 % [relative, equality] = genConstraint(labels, rel_class, eql_class)
 %
-% Function genConstraint generates random equality and inequality
+% Function GENCONSTRAINT generates random equality and inequality
 % constraints based on the EQL_CLASS and REL_CLASS labels, respectively.
 % Variable LABELS is the labels of the datapoints. EQL_CLASS is a (N_eq x 4)
 % matrix where each row is of the form [i,j,k,no_reps], in which i, j, and
@@ -23,14 +23,14 @@ function [relative, equality] = genConstraint(labels, rel_class, eql_class)
 %
 % (C) Ehsan Amid, Aalto University
 
-if ~exist('comp', 'var') || isempty(rel_class)
+if ~exist('rel_class', 'var') || isempty(rel_class)
     rel_class = [];
     relative = [];
 else
     relative = zeros(sum(rel_class(:,4)),3);
 end
 
-if ~exist('eql', 'var') || isempty(eql_class)
+if ~exist('eql_class', 'var') || isempty(eql_class)
     eql_class = [];
     equality = [];
 else

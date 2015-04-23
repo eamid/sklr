@@ -3,7 +3,7 @@ function perms = allperms(inliers, outliers, no_reps)
 % 
 % perms = allperms(inliers, outliers, reps)
 %
-% Function allperms returns all possible selections of two points from
+% Function ALLPERMS returns all possible selections of two points from
 % the inliers and the third point from the outliers. Number of repetitions 
 % is added as the forth argument. For instance, allperms([1 2 3],[4 5], 10)
 % returns:

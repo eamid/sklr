@@ -3,7 +3,7 @@ function [K, error] = bregmanProj(K0, relative, equality, max_iter, low_rank)
 % 
 % [K, error] = bregmanProj(K0, relative, equality, max_iter, low_rank)
 %
-% Function bregmanProj performs iterative Bregman projections on the
+% Function BREGMANPROJ performs iterative Bregman projections on the
 % initial kernel matrix K0 until the set of inequality and equality 
 % constraints are satisfied or the maximum number of iterations is reached.
 %

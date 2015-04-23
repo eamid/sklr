@@ -3,7 +3,7 @@ function K0 = gaussKernel(X,k)
 % 
 % K = gaussKernel(X,k)
 %
-% Function gaussKernel(X,k) finds the initial Gaussian kernel matrix of the
+% Function GAUSSKERNEL(X,k) finds the initial Gaussian kernel matrix of the
 % input X. The bandwidth parameter is estimated adaptively, based on the
 % k-nearest neighbor.
 %
